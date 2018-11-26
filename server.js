@@ -12,15 +12,16 @@ const timeLogger = (request, response, next) => {
 
 app.use(urlLogger, timeLogger);
 app.use(express.static(__dirname + '/public'));
+
 // app.get('/', (request, response) => {
 // });
 
 app.get('/json', (request, response) => {
-  response.status(200).json({'name': 'Cole'});
+  response.status(200).sendFile(__dirname + '/challenge.json');
 });
 
 app.get('/sunsets', (request, response) => {
-  response.sendFile('sunsets.html');
+  response.sendFile(__dirname + '/public/sunsets.html');
 });
 
 app.use((request, response, next) => {

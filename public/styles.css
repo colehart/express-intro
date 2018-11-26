@@ -15,6 +15,13 @@ header {
   align-items: center;
 }
 
+main {
+  grid-row: 2 / 3;
+  dipslay: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 h1 {
   color: blue;
 }
